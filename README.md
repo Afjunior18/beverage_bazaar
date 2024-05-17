@@ -1,112 +1,145 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Planning Phase
 
-Welcome USER_NAME,
+Beverage Bazaar is an online marketplace dedicated to aficionados and enthusiasts seeking the finest selection of beverages from around the world. Our platform offers a curated collection of premium wines, exquisite whiskeys, luxurious champagnes, delightful sparkling wines and craft beers.
+At Beverage Bazaar, we understand the passion and discerning taste of our customers, which is why we strive to provide a diverse range of offerings to cater to every palate and occasion. Whether you're searching for a rare vintage wine to complement a special celebration, a smooth and sophisticated whiskey for indulgent moments, or a refreshing artisanal beer for casual enjoyment, our platform is your ultimate destination.
+Detailed product descriptions, including origin, tasting notes, and expert recommendations, empower customers to make informed choices and elevate their drinking experience.
+Beyond offering an unparalleled selection of fine beverages, Beverage Bazaar is committed to providing exceptional customer service and a hassle-free shopping experience. Our secure payment processing and efficient delivery options ensure that your chosen beverages are delivered to your doorstep with care and convenience.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+### Brand Identity:
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **April 26, 2024**
+## Scope
 
-## Gitpod Reminders
+Beverage Bazaar aims to create a user-friendly online marketplace for enthusiasts to explore and purchase a wide range of fine beverages. The scope of the project encompasses the development of essential features to ensure the platform's functionality and ease of use:
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Feature Prioritization
 
-`python3 -m http.server`
+1.	User Registration and Authentication:
+- Users will be able to create accounts, providing basic information such as name, email, and password.
+- Authentication mechanisms will ensure secure access to user accounts.
 
-A blue button should appear to click: _Make Public_,
+2.	Beverage Browsing:
+- User-friendly interface for browsing a wide selection of fine beverages, categorized by type (wine, whiskey, champagne, beer, etc.).
+- Detailed product listings with images, descriptions, origin, tasting notes, and pricing.
+- Advanced search and filtering options to help users find specific beverages based on criteria such as type, region, price range, and ratings.
 
-Another blue button should appear to click: _Open Browser_.
+3.	Ordering:
+- Checkout process allowing users to add selected beverages to their cart and proceed to checkout.
+- Option for users to specify delivery preferences, including shipping address.
+- Order confirmation emails with detailed summaries of purchased items and delivery information.
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+4.	Payment Processing:
+- Secure payment processing system supporting  payment methods, including credit and debit cards.
+- Integration with a reliable payment service provider to ensure transactions are processed securely and efficiently.
 
-A blue button should appear to click: _Make Public_,
+5.	User Management:
+- User authentication system allowing users to create accounts, log in, and securely access their profiles.
+- Profile management functionalities enabling users to update personal information, manage saved addresses, and view order history.
+- Account settings for preferences such as email notifications and communication preferences.
 
-Another blue button should appear to click: _Open Browser_.
+6.	Product Reviews and Ratings:
+- Feature allowing users to leave reviews and ratings for purchased beverages, sharing their experiences and recommendations with other users.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+7.	Admin Panel:
+- Admin dashboard for content moderation and management, enabling administrators to monitor user activity, manage product listings, and oversee order processing.
+- Tools for adding, editing, and removing beverages from the catalogue, as well as managing user accounts and resolving disputes.
 
-To log into the Heroku toolbelt CLI:
+8.	Newsletter Subscription
+- Users can opt-in to receive weekly newsletters featuring product recommendations, promotions, and other updates.
+- Newsletter content includes curated beverage selections, exclusive offers, and industry news to engage and inform subscribers.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+9.	Supplier Application Process
+- Suppliers interested in listing their products in the online store can request inclusion by submitting an application.
+- The application process includes providing details about the products, such as descriptions and pricing.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+10.	Responsive Design
+- Responsive and mobile-friendly design ensuring a seamless browsing and purchasing experience across devices, including smartphones, tablets, and desktop computers.
 
-------
+By implementing these features and functionalities, Beverage Bazaar will provide users with a comprehensive and convenient online platform for exploring, purchasing, and enjoying a diverse range of fine beverages.
 
-## Release History
+## Structure
+The structure of Beverage Bazaar's platform is designed to provide a seamless and intuitive user experience, ensuring easy access to key features such as browsing beverages, managing user accounts, placing orders, sign up for newsletter and writing reviews.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+![Flowchar](docs/images/flowchart.png)
 
-**April 26 2024:** Update node version to 16
+## User Stories
 
-**September 20 2023:** Update Python version to 3.9.17.
+1. **As an Admin...**
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+    - As an Admin, I can access a user-friendly admin panel to manage beverage listings, user accounts, and platform settings efficiently.
+    - As an Admin, I can easily add, edit, and delete beverage listings from the admin dashboard to ensure the accuracy and relevance of the product catalog.
+    - As an Admin, I can review requests from suppliers to include their products in the Beverage Bazaar platform.
+    - As an Admin, I can approve or reject supplier requests for product inclusion based on quality standards and platform guidelines.
+    - As an Admin, I can monitor user activity and manage user accounts, including the ability to suspend or delete accounts if necessary.
+    - As an Admin, I can receive notifications for important events such as new beverage listings, user registrations, and orders to stay informed and take timely actions.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+2. **As a Supplier...**
+    - As a Supplier, I can create an account on Beverage Bazaar to showcase my fine beverages to a wider audience.
+    - As a Supplier, I can request inclusion of my products in the Beverage Bazaar platform by submitting a form with product details for review by the admin.
+    - As a Supplier, I can receive notifications for the status of my product inclusion requests, enabling me to stay informed about the review process.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+3. **As a Customer...**
+    - As a Customer, I can create an account on Beverage Bazaar to explore and purchase a variety of fine beverages.
+    - As a Customer, I can browse through different beverage categories, such as wines, whiskeys, champagnes, beers, etc., to discover new products.
+    - As a Customer, I can search for specific beverages based on criteria like type, origin, price range, and ratings to find products that suit my preferences.
+    - As a Customer, I can view detailed product listings, including descriptions, origin, tasting notes, and pricing, to make informed purchasing decisions.
+    - As a Customer, I can read product reviews and ratings from other users to help me make informed purchasing decisions.
+    - As a Customer, I can save favorite beverages to a wishlist for easy access and future purchase consideration.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+4. **As a Newsletter Subscriber...**
+    - As a Newsletter Subscriber, I can opt-in to receive weekly newsletters from Beverage Bazaar featuring product recommendations, promotions, and industry news.
+    - As a Newsletter Subscriber, I can stay updated with the latest offerings and trends in the world of fine beverages by reading the newsletter content delivered to my inbox regularly.
+    - As a Newsletter Subscriber, I can easily unsubscribe or opt-out from receiving newsletters from Beverage Bazaar if I no longer wish to receive them.
+    - As a Newsletter Subscriber, I can find a clear and easily accessible option to unsubscribe or manage my newsletter preferences within the newsletter email or on the Beverage Bazaar website.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Skeleton
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Wireframe
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+**Wireframes:** Wireframes are created for each page of the platform, depicting the layout of elements such as navigation bar, search filters, products, products details and shopping bag.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+[Homepage - large devices](docs/images/homepage.png)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+[Homepage - medium devices](docs/images/homapage_ipad.png)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+[Homepage - small devices](docs/images/homepage_mobile.png)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+[Products - large devices](docs/images/products.png)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+[Products - medium devices](docs/images/products_ipad.png)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+[Products - small devices](docs/images/products_mobile.png)
 
-------
+[Products Details - large devices](docs/images/products_details.png)
 
-## FAQ about the uptime script
+[Products Details - medium devices](docs/images/products_details_ipad.png)
 
-**Why have you added this script?**
+[Products Details - small devices](docs/images/products_details_mobile.png)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+[Shopping Bag - large devices](docs/images/bag.png)
 
-**How will this affect me?**
+[Shopping Bag - medium devices](docs/images/bag_ipad.png)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+[Shopping Bag - small devices](docs/images/bag_mobile.png)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Colour Scheme
 
-**So….?**
+### Typography
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### Database Schema
 
-**Can I opt out?**
+This diagram depicts the relationship between several tables: Users, Beverages, Orders, Order_Items, Reviews, and Wishlist. Each table is designed to store essential information for the Beverage Bazaar platform.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- The Users table stores user data, including account information and authentication details.
+- The Beverages table contains details about the available beverages, such as name, type, origin, description, and price.
+- The Orders table records information about user orders, linking each order to a specific user.
+- The Order_Items table breaks down orders into individual items, associating each item with a specific order and beverage.
+- The Reviews table stores user reviews and ratings for beverages, linking each review to both the user who wrote it and the beverage being reviewed.
+- The Wishlist table keeps track of beverages that users have marked as favorites, linking each entry to the relevant user and beverage.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+Foreign key relationships are used to establish connections between these tables, ensuring data integrity.
 
-**Anything more?**
+Below is the preliminary layout for the database tables:
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+![Database Scheme](docs/images/DiagramRoom.png)

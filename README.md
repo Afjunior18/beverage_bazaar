@@ -14,45 +14,45 @@ Beverage Bazaar aims to create a user-friendly online marketplace for enthusiast
 ### Feature Prioritization
 
 1.	User Registration and Authentication:
-- Users will be able to create accounts, providing basic information such as name, email, and password.
-- Authentication mechanisms will ensure secure access to user accounts.
+    - Users will be able to create accounts, providing basic information such as name, email, and password.
+    - Authentication mechanisms will ensure secure access to user accounts.
 
 2.	Beverage Browsing:
-- User-friendly interface for browsing a wide selection of fine beverages, categorized by type (wine, whiskey, champagne, beer, etc.).
-- Detailed product listings with images, descriptions, origin, tasting notes, and pricing.
-- Advanced search and filtering options to help users find specific beverages based on criteria such as type, region, price range, and ratings.
+    - User-friendly interface for browsing a wide selection of fine beverages, categorized by type (wine, whiskey, champagne, beer, etc.).
+    - Detailed product listings with images, descriptions, origin, tasting notes, and pricing.
+    - Advanced search and filtering options to help users find specific beverages based on criteria such as type, region, price range, and ratings.
 
 3.	Ordering:
-- Checkout process allowing users to add selected beverages to their cart and proceed to checkout.
-- Option for users to specify delivery preferences, including shipping address.
-- Order confirmation emails with detailed summaries of purchased items and delivery information.
+    - Checkout process allowing users to add selected beverages to their cart and proceed to checkout.
+    - Option for users to specify delivery preferences, including shipping address.
+    - Order confirmation emails with detailed summaries of purchased items and delivery information.
 
 4.	Payment Processing:
-- Secure payment processing system supporting  payment methods, including credit and debit cards.
-- Integration with a reliable payment service provider to ensure transactions are processed securely and efficiently.
+    - Secure payment processing system supporting  payment methods, including credit and debit cards.
+    - Integration with a reliable payment service provider to ensure transactions are processed securely and efficiently.
 
 5.	User Management:
-- User authentication system allowing users to create accounts, log in, and securely access their profiles.
-- Profile management functionalities enabling users to update personal information, manage saved addresses, and view order history.
-- Account settings for preferences such as email notifications and communication preferences.
+    - User authentication system allowing users to create accounts, log in, and securely access their profiles.
+    - Profile management functionalities enabling users to update personal information, manage saved addresses, and view order history.
+    - Account settings for preferences such as email notifications and communication preferences.
 
 6.	Product Reviews and Ratings:
-- Feature allowing users to leave reviews and ratings for purchased beverages, sharing their experiences and recommendations with other users.
+    - Feature allowing users to leave reviews and ratings for purchased beverages, sharing their experiences and recommendations with other users.
 
 7.	Admin Panel:
-- Admin dashboard for content moderation and management, enabling administrators to monitor user activity, manage product listings, and oversee order processing.
-- Tools for adding, editing, and removing beverages from the catalogue, as well as managing user accounts and resolving disputes.
+    - Admin dashboard for content moderation and management, enabling administrators to monitor user activity, manage product listings, and oversee order processing.
+    - Tools for adding, editing, and removing beverages from the catalogue, as well as managing user accounts and resolving disputes.
 
 8.	Newsletter Subscription
-- Users can opt-in to receive weekly newsletters featuring product recommendations, promotions, and other updates.
-- Newsletter content includes curated beverage selections, exclusive offers, and industry news to engage and inform subscribers.
+    - Users can opt-in to receive weekly newsletters featuring product recommendations, promotions, and other updates.
+    - Newsletter content includes curated beverage selections, exclusive offers, and industry news to engage and inform subscribers.
 
 9.	Supplier Application Process
-- Suppliers interested in listing their products in the online store can request inclusion by submitting an application.
-- The application process includes providing details about the products, such as descriptions and pricing.
+    - Suppliers interested in listing their products in the online store can request inclusion by submitting an application.
+    - The application process includes providing details about the products, such as descriptions and pricing.
 
 10.	Responsive Design
-- Responsive and mobile-friendly design ensuring a seamless browsing and purchasing experience across devices, including smartphones, tablets, and desktop computers.
+    - Responsive and mobile-friendly design ensuring a seamless browsing and purchasing experience across devices, including smartphones, tablets, and desktop computers.
 
 By implementing these features and functionalities, Beverage Bazaar will provide users with a comprehensive and convenient online platform for exploring, purchasing, and enjoying a diverse range of fine beverages.
 
@@ -142,4 +142,4 @@ Foreign key relationships are used to establish connections between these tables
 
 Below is the preliminary layout for the database tables:
 
-![Database Scheme](docs/images/diagram_bevarages_models.png)
+![Database Scheme](docs/images/DiagramRoom.png)

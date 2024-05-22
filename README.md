@@ -142,4 +142,4 @@ Foreign key relationships are used to establish connections between these tables
 
 Below is the preliminary layout for the database tables:
 
-![Database Scheme](docs/images/DiagramRoom.png)
+![Database Scheme](docs/images/diagram_bevarages_models.png)

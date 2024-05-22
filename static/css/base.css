@@ -17,6 +17,8 @@ body {
 
 .custom-bg-logo {
     background-color: white;
+    padding: 5px;
+    
 }
 
 .body-logo-font{
@@ -32,7 +34,8 @@ body {
 .shop-now-button {
     background: black;
     color: white;
-    min-width: 260px;
+    padding: 20px;
+    
 }
 
 .btn-black {
@@ -56,4 +59,12 @@ body {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #fff !important;
+    color: black !important;
+    border: 2px solid black;
+    margin: 1px;
+    width: 100%;
 }

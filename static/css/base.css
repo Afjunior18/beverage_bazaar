@@ -4,7 +4,7 @@ html {
 
 body {
     background: url('/media/background_01.png') no-repeat center center fixed;
-    background-size: cover;
+    /*background-size: cover;*/
     height: calc(100vh - 164px);
     color: #555;
     font-family: "Kanit", sans-serif;

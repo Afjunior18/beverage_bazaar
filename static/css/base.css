@@ -78,3 +78,8 @@ body {
     background: white;
     z-index: -1;
 }
+
+.card-img-top {
+    max-height: 300px;
+    width: auto;
+}

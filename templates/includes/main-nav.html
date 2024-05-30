@@ -5,10 +5,9 @@
                 Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?category=Gins,Wines,Whiskies" class="dropdown-item">All Products</a>
-                <a href="{% url 'products' %}?category=Wines" class="dropdown-item ">Wines</a>
-                <a href="{% url 'products' %}?category=Gins" class="dropdown-item ">Gins</a>
-                <a href="{% url 'products' %}?category=Whiskies" class="dropdown-item ">Whiskeys</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?category=Whiskies,Whiskeys,Wines,Gins" class="dropdown-item ">All Products</a>
             </div>
         </li>
 
@@ -17,6 +16,7 @@
                 Wines
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="product-items-link">
+                <a href="{% url 'products' %}?category=Wines&sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?category=Wines&region=France" class="dropdown-item">France</a>
                 <a href="{% url 'products' %}?category=Wines&region=Spain" class="dropdown-item">Spain</a>
                 <a href="{% url 'products' %}?category=Wines&region=Italy" class="dropdown-item">Italy</a>
@@ -30,6 +30,7 @@
                 Whiskeys
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="whiskeys-link">
+                <a href="{% url 'products' %}?category=Whiskeys,Whiskies&sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?category=Whiskeys,Whiskies&region=Scotland" class="dropdown-item">Scotland</a>
                 <a href="{% url 'products' %}?category=Whiskeys,Whiskies&region=Ireland" class="dropdown-item">Ireland</a>
                 <a href="{% url 'products' %}?category=Whiskeys,Whiskies&region=Canada" class="dropdown-item">Canada</a>
@@ -44,18 +45,11 @@
                 Gins
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="gin-link">
+                <a href="{% url 'products' %}?category=Gins&sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?category=Gins&region=England" class="dropdown-item">England</a>
                 <a href="{% url 'products' %}?category=Gins&region=Scotland" class="dropdown-item">Scotland</a>
                 <a href="{% url 'products' %}?category=Gins&region=USA" class="dropdown-item">USA</a>
                 <a href="{% url 'products' %}?category=Gins" class="dropdown-item">All & Other Regions</a>
-            </div>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="special-offer-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Special Offers
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="special-offer-link">
-                <a href="" class="dropdown-item">Clearance</a>
             </div>
         </li>
     </ul>

@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404, redirect, render, HttpResponse
+from django.http import HttpResponseBadRequest
 from .models import Wishlist
 from products.models import Product
 from .forms import WishlistForm
@@ -24,10 +25,15 @@ def add_to_wishlist(request, product_id):
         return HttpResponse(status=405)
 
 def remove_from_wishlist(request, product_id):
-    product = get_object_or_404(Product, id=product_id)
-    wishlist = get_object_or_404(Wishlist, user=request.user)
-    wishlist.products.remove(product)
-    return redirect('wishlist')
+    if request.method == 'POST':
+        product = get_object_or_404(Product, id=product_id)
+        wishlist = Wishlist.objects.filter(user=request.user).first()
+        if wishlist:
+            wishlist.products.remove(product)
+        return redirect('wishlist')
+    else:
+        return HttpResponseBadRequest("Only POST requests are allowed")
+
 
 def wishlist(request):
     wishlist_items = Wishlist.objects.filter(user=request.user)

@@ -24,7 +24,7 @@
                         <div class="card h-100 border-2 text-center">
                             {% if product.image %}
                                 <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid mt-5" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    <img class="card-img-top img-fluid mt-4" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                             {% else %}
                                 <a href="{% url 'product_detail' product.id %}">
@@ -44,6 +44,10 @@
                                             <small class="text-muted">No Rating</small>
                                         {% endif %}
                                         <p class="lead mb-0 text-center">{{ product.region }}</p>
+                                        <form method="post" action="{% url 'remove_from_wishlist' product.id %}">
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn btn-danger mt-3 mb-3">Remove</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

@@ -47,6 +47,12 @@
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
                                             <p class="lead mb-0 text-center"></p>{{ product.region }}</p>
+                                            <form method="post" action="{% url 'add_to_wishlist' product_id=product.id %}" class="text-right">
+                                                {% csrf_token %}
+                                                <input type="hidden" name="product_id" value="{{ product.id }}">
+                                                {{ form|crispy }}
+                                                <button type="submit" class="btn btn-black rounded-0 text-uppercase mt-2">Wishlist</button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>

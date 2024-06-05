@@ -61,14 +61,12 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
-                    <div class="col-12 text-right mt-3">
-                        <form method="post" action="{% url 'add_to_wishlist' product_id=product.id %}">
-                            {% csrf_token %}
-                            <input type="hidden" name="product_id" value="{{ product.id }}">
-                            {{ form|crispy }}
-                            <button type="submit" class="btn btn-black rounded-0 text-uppercase mt-2">Add to wishlist</button>
-                        </form>
-                    </div>
+                    <form method="post" action="{% url 'add_to_wishlist' product_id=product.id %}" class="text-left">
+                        {% csrf_token %}
+                        <input type="hidden" name="product_id" value="{{ product.id }}">
+                        {{ form|crispy }}
+                        <button type="submit" class="btn btn-black rounded-0 text-uppercase mt-2">Add to wishlist</button>
+                    </form>
                 </div>
             </div>
         </div>

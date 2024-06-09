@@ -3,6 +3,7 @@ from django.http import HttpResponseBadRequest
 from .models import Wishlist
 from products.models import Product
 from .forms import WishlistForm
+from django.contrib import messages
 
 from products.views import calculate_product_rating
 
@@ -20,6 +21,7 @@ def add_to_wishlist(request, product_id):
             wishlist_form = form.save(commit=False)
             wishlist_form.user = request.user
             wishlist_form.save()
+            messages.success(request, "Added to your Wishlist!")
             return redirect('wishlist')
         else:
             return HttpResponse(status=400)

@@ -1,7 +1,11 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.db.models import Q
+from django.db.models import Q, Avg
 from .models import Product, Category
+
+from reviews.forms import ReviewForm
+
 
 # Create your views here.
 def all_products(request):
@@ -51,6 +55,10 @@ def all_products(request):
     
     current_sorting = f'{sort}_{direction}'
 
+    # Calculating product rating for each product
+    for product in products:
+        product.rating = calculate_product_rating(product)
+
     context = {
         'products': products,
         'search_term': query,
@@ -62,13 +70,33 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
+@login_required
 def product_detail(request, product_id):
-    """ A view to show a a specific product details """
-
     product = get_object_or_404(Product, pk=product_id)
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.product = product
+            review.user = request.user
+            review.save()
+            return redirect('product_detail', product_id=product.id)
+    else:
+        form = ReviewForm()
+
+    # calculate avarage rating
+    product_rating = calculate_product_rating(product)
 
     context = {
         'product': product,
+        'form': form,
+        'product_rating': product_rating,
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def calculate_product_rating(product):
+    rating_avg = product.reviews.aggregate(Avg('rating'))['rating__avg']
+    return rating_avg if rating_avg is not None else 0

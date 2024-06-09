@@ -4,6 +4,8 @@ from .models import Wishlist
 from products.models import Product
 from .forms import WishlistForm
 
+from products.views import calculate_product_rating
+
 # Create your views here.
 
 def add_to_wishlist(request, product_id):
@@ -40,4 +42,9 @@ def wishlist(request):
     products = []
     for item in wishlist_items:
         products.extend(list(item.products.all()))
+
+    # Calculating product rating for each product
+    for product in products:
+        product.rating = calculate_product_rating(product)
+
     return render(request, 'wishlist/wishlist.html', {'products': products})

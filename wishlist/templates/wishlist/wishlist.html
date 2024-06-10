@@ -42,7 +42,7 @@
                                             <p class="lead mb-0 text-center"></p>{{ product.region }}</p>
                                             <form method="post" action="{% url 'remove_from_wishlist' product.id %}" class="text-right">
                                                 {% csrf_token %}
-                                                <button type="submit" class="btn btn-danger mt-3 mb-3" id="removeButton">Remove</button>
+                                                <button type="submit" class="btn btn-danger mt-3 mb-3" id="removeButton"><i class="fa-solid fa-trash"></i></button>
                                             </form>
                                         </div>
                                     </div>

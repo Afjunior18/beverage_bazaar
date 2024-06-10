@@ -43,15 +43,15 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-6 text-left mt-lg-5 mt-md-5 mt-sm-0">
-                <div class="mb-5 mt-md-5">
+            <div class="col-12 col-md-6 col-lg-6 text-md-center text-lg-left text-sm-center mt-lg-5 mt-md-5 mt-sm-0 ">
+                <div class="mb-5 mt-md-5 ">
                     <p class="mb-0">"{{ product.name }}"</p>
                     <p class="lead mt-3 mb-3 font-weight-bold">${{ product.price }} </p>
                     
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
-                            <div class="col-12">
+                            <div class="col-12 text-center">
                                 <p class="mt-0 text-left"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
@@ -75,28 +75,30 @@
                     <form method="post" action="{% url 'add_to_wishlist' product_id=product.id %}" class="text-left">
                         {% csrf_token %}
                         <input type="hidden" name="product_id" value="{{ product.id }}">
-                        <button type="submit" class="btn btn-black rounded-0 text-uppercase mt-2">Add to wishlist</button>
+                        <button type="submit" class="btn btn-black rounded-0 text-uppercase mt-2"><i class="fa-solid fa-heart fa-lg"></i></button>
                     </form>
                     <h3 class="mt-3">Rate this Product</h3>
                     <form method="POST">
                         {% csrf_token %}
-                        <div>
-                            <input type="radio" id="rating1" name="rating" value="1">
-                            <label for="rating1">1 star</label>
-                
-                            <input type="radio" id="rating2" name="rating" value="2">
-                            <label for="rating2">2 stars</label>
-                
-                            <input type="radio" id="rating3" name="rating" value="3">
-                            <label for="rating3">3 stars</label>
-                
-                            <input type="radio" id="rating4" name="rating" value="4">
-                            <label for="rating4">4 stars</label>
-                
-                            <input type="radio" id="rating5" name="rating" value="5">
-                            <label for="rating5">5 stars</label>
+                        <div class="row">
+                            <div class="col-6 mt-2">
+                                <input type="radio" id="rating1" name="rating" value="1">
+                                <label for="rating1">1 <i class="fa-regular fa-star"></i></label>
+                    
+                                <input type="radio" id="rating2" name="rating" value="2">
+                                <label for="rating2">2 <i class="fa-regular fa-star"></i></label>
+                    
+                                <input type="radio" id="rating3" name="rating" value="3">
+                                <label for="rating3">3 <i class="fa-regular fa-star"></i></label>
+                    
+                                <input type="radio" id="rating4" name="rating" value="4">
+                                <label for="rating4">4 <i class="fa-regular fa-star"></i></label>
+                    
+                                <input type="radio" id="rating5" name="rating" value="5">
+                                <label for="rating5">5 <i class="fa-regular fa-star"></i></label>
+                            </div>
+                            <button type="submit" class="btn btn-black rounded-0 text-uppercase">Submit</button>
                         </div>
-                        <button type="submit">Submit</button>
                     </form>
                 </div>
             </div>

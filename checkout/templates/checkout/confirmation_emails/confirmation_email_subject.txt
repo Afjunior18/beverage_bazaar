@@ -1,0 +1,1 @@
+Beverage Bazaar Confirmation dor Order Nunber {{ order.order_number }}

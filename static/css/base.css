@@ -5,9 +5,13 @@ html {
 body {
     background: url('/media/background_01.png') no-repeat center center fixed;
     height: calc(100vh - 164px);
-    color: #555;
+    color: #ADADAD;
     font-family: "Kanit", sans-serif;
     
+}
+
+h1, h2, h3 {
+    color: #575757;
 }
 
 .logo-font {
@@ -80,11 +84,33 @@ body {
 }
 
 .bg-black {
-    background: #fff !important;
-    color: black !important;
-    border: 2px solid black;
-    margin-top: 2px;
+    background: #000000 !important;
+    color: #fff !important;
     width: 100%;
+    padding: 2px;
+}
+
+.marquee{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.marquee p {
+    margin-top: 10px;
+    display: inline-block;
+    padding-left: 100%; /* Inicia o texto fora da tela à direita */
+    animation: marquee 20s linear infinite; /* Aplica a animação */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%); /* Início do movimento (fora da tela à direita) */
+    }
+    100% {
+        transform: translateX(-100%); /* Fim do movimento (fora da tela à esquerda) */
+    }
 }
 
 .overlay {
@@ -93,7 +119,7 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: white;
+    background: #ADADAD;
     z-index: -1;
 }
 

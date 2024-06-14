@@ -10,6 +10,11 @@
 {% endblock %}
 
 {% block content %}
+    <div id="delivery-banner" class="row text-center">
+        <div class="col bg-black text-white marquee">
+            <p class="text-uppercase">Free delivery on orders over ${{ free_delivery_threshold }}!</p>                
+        </div>            
+    </div>
     <div class="container h-100">
         <div class="row h-100">
             <div class="col7 col-md-6 my-auto">

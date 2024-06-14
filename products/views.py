@@ -125,3 +125,16 @@ def add_product(request):
     }
 
     return render(request, 'products/add_product.html', context)
+
+
+@login_required
+def delete_product(request, product_id):
+    """ Delete a product """
+    if not request.user.is_superuser:
+        messages.error(request, "You're not allowed! Only Admin can delete a product!")
+        return redirect('products')
+
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, "Product deleted!")
+    return redirect('products')

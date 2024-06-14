@@ -47,12 +47,20 @@
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
                                             <p class="lead mb-0 text-center"></p>{{ product.region }}</p>
-                                            <form method="post" action="{% url 'add_to_wishlist' product_id=product.id %}" class="text-right">
+                                            <div class="row d-flex justify-content-end mr-1">
+                                                <form method="post" action="{% url 'add_to_wishlist' product_id=product.id %}" class="text-right">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="product_id" value="{{ product.id }}">
+                                                    {{ form|crispy }}
+                                                    <button type="submit" class="btn btn-black"><i class="fa-solid fa-heart fa-lg"></i></button>
+                                                </form>
+                                                {% if user.is_superuser %}
+                                                <form action="{% url 'delete_product' product.id %}" method="post" class="d-inline ml-2">
                                                 {% csrf_token %}
-                                                <input type="hidden" name="product_id" value="{{ product.id }}">
-                                                {{ form|crispy }}
-                                                <button type="submit" class="btn btn-black"><i class="fa-solid fa-heart fa-lg"></i></button>
-                                            </form>
+                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                                </form>
+                                            </div>
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>

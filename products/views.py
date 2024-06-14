@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models import Q, Avg
 from .models import Product, Category
+from .forms import ProductForm
 
 from reviews.forms import ReviewForm
 
@@ -101,3 +102,26 @@ def product_detail(request, product_id):
 def calculate_product_rating(product):
     rating_avg = product.reviews.aggregate(Avg('rating'))['rating__avg']
     return rating_avg if rating_avg is not None else 0
+
+
+@login_required
+def add_product(request):
+    """View to add a new product"""
+    if not request.user.is_superuser:
+        messages.error(request, "You're not allowed! Only Admin can add a product!")
+        return redirect('home')
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Product added!")
+            return redirect('products')
+    else:
+        form = ProductForm()
+
+    context = {
+        'form': form
+    }
+
+    return render(request, 'products/add_product.html', context)

@@ -57,7 +57,7 @@
                                                 {% if user.is_superuser %}
                                                     <!-- Delete button confirmation -->
                                                     <button type="button" class="btn btn-danger ml-2" data-toggle="modal" data-target="#confirmDeleteModal{{ product.id }}">
-                                                        Delete
+                                                        <i class="fa-solid fa-trash"></i>
                                                     </button>
                                                     <!-- Delete modal confitmation -->
                                                     <div class="modal fade" id="confirmDeleteModal{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel{{ product.id }}" aria-hidden="true">
@@ -95,8 +95,3 @@
         </div>
     </div>
 {% endblock %}
-<script>
-    $('#confirmDeleteModal').on('hidden.bs.modal', function () {
-      
-    });
-</script>

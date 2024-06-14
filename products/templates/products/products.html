@@ -47,8 +47,15 @@
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
                                             <p class="lead mb-0 text-center"></p>{{ product.region }}</p>
-                                            <div class="row d-flex justify-content-end mr-1">
-                                                <form method="post" action="{% url 'add_to_wishlist' product_id=product.id %}" class="text-right">
+                                            <div class="row d-flex justify-content-center mr-1">
+                                                <form method="post" action="{% url 'add_to_bag' product.id %}" class="mr-2">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="product_id" value="{{ product.id }}">
+                                                    <input type="hidden" name="quantity" value="1">
+                                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                                    <button type="submit" class="btn btn-black"><i class="fas fa-shopping-bag fa-lg"></i></button>
+                                                </form>
+                                                <form method="post" action="{% url 'add_to_wishlist' product_id=product.id %}">
                                                     {% csrf_token %}
                                                     <input type="hidden" name="product_id" value="{{ product.id }}">
                                                     {{ form|crispy }}

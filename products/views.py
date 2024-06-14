@@ -128,13 +128,13 @@ def add_product(request):
 
 
 @login_required
-def delete_product(request, product_id):
+def delete_product(request, pk):
     """ Delete a product """
     if not request.user.is_superuser:
         messages.error(request, "You're not allowed! Only Admin can delete a product!")
         return redirect('products')
 
-    product = get_object_or_404(Product, pk=product_id)
+    product = get_object_or_404(Product, pk=pk)
     product.delete()
     messages.success(request, "Product deleted!")
     return redirect('products')

@@ -7,11 +7,10 @@ body {
     height: calc(100vh - 164px);
     color: #ADADAD;
     font-family: "Kanit", sans-serif;
-    
 }
 
 h1, h2, h3 {
-    color: #575757;
+    color: #000000;
 }
 
 .logo-font {
@@ -21,7 +20,6 @@ h1, h2, h3 {
 .custom-bg-logo {
     background-color: white;
     padding: 5px;
-    
 }
 
 .body-logo-font{

@@ -13,11 +13,23 @@ h1, h2, h3 {
     color: #000000;
 }
 
-label {
+.label-custom {
     background-color: black;
-    color: white;
+    color: white !important;
     padding: 15px;
     border-radius: 50%;
+}
+
+#signup_form label {
+    background-color: white !important;
+    color: black !important;
+    padding: 5px !important;
+}
+
+#login_form label {
+    background-color: white !important;
+    color: black !important;
+    padding: 5px !important;
 }
 
 .logo-font {

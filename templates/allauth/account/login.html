@@ -6,8 +6,7 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
-<div class="container mt-5">
+<div class="container mt-5 bg-white text-black">
   <h1>{% trans "Sign In" %}</h1>
 
   {% get_providers as socialaccount_providers %}
@@ -33,7 +32,7 @@
   <p>{% blocktrans %}If you have not created an account yet, then please
   <a href="{{ signup_url }}" class="text-black ">sign up</a> first.{% endblocktrans %}</p>
   {% endif %}
-  <form class="login" method="POST" action="{% url 'account_login' %}">
+  <form class="login" id="login_form" method="POST" action="{% url 'account_login' %}">
     {% csrf_token %}
     <div class="form-group">
       <label class="control-label" for="id_login">{{ form.login.label }}</label>
@@ -52,8 +51,8 @@
     {% endif %}
     <div class="form-group">
       <div class="controls">
-        <a class="btn btn-outline-black rounded-0 mt-2" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-        <button class="btn btn-black rounded-0 text-uppercase mt-2" type="submit">{% trans "Sign In" %}</button>
+        <a class="btn btn-outline-black rounded-0 mt-2 mb-4" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+        <button class="btn btn-black rounded-0 text-uppercase mt-2 mb-4" type="submit">{% trans "Sign In" %}</button>
       </div>
     </div>
   </form>

@@ -34,7 +34,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
                     '8000-afjunior18-beveragebaza-8k5ffklxuph.ws-eu114.gitpod.io',
-                    'https://bevarages-bazaar-677df0f4b466.herokuapp.com/'
+                    'bevarages-bazaar-677df0f4b466.herokuapp.com'
                 ]
 
 

@@ -5,6 +5,8 @@ from django.db.models import Q, Avg
 from .models import Product, Category
 from .forms import ProductForm
 
+from .utils import remove_item_from_bag
+
 from reviews.forms import ReviewForm
 
 
@@ -150,3 +152,11 @@ def edit_product(request, pk):
     else:
         form = ProductForm(instance=product)
     return render(request, 'products/edit_product.html', {'form': form, 'product': product})
+
+
+def remove_from_bag(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    
+    remove_item_from_bag(request, product)
+    
+    return redirect('view_bag')

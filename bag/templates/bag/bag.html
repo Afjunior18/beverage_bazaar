@@ -10,11 +10,10 @@
     {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container mb-2">
+    <div class="container mt-3 bg-white text-black p-5">
         <div class="row">
             <div class="col">
-                <h2 class="logo-font mb-4 mt-4">Shopping Bag</h2>
+                <h2 class="logo-font mt-4">Shopping Bag</h2>
                 <hr>
             </div>
         </div>
@@ -31,13 +30,14 @@
                                     <th scope="col">Price</th>
                                     <th scope="col">Qty</th>
                                     <th scope="col">Subtotal</th>
+                                    <th scope="col">Actions</th>
                                 </tr>
                             </thead>
 
                             {% for item in bag_items %}
                                 <tr class="text-center">
                                     <td class="p-3 w-25">
-                                        <img class="img-fluid rounded mt-2" src="{{ item.product.image.url }}">
+                                        <img class="img-fluid rounded mt-2 img-bag" src="{{ item.product.image.url }}">
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
@@ -51,6 +51,14 @@
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.price }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <form action="{% url 'remove_from_bag' item.product.id %}" method="POST">
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn btn-outline-danger btn-sm">
+                                                <i class="fas fa-trash"></i> Delete
+                                            </button>
+                                        </form>
                                     </td>
                                 </tr>
                             {% endfor %}

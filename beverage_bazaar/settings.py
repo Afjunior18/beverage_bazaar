@@ -15,6 +15,9 @@ from pathlib import Path
 import os
 import dj_database_url
 import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 
 if os.path.exists("env.py"):
   import env 
@@ -47,10 +50,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'cloudinary_storage',
     'django.contrib.staticfiles',
-    'cloudinary',
-    'django.contrib.sites',
+    'cloudinary',    
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -179,16 +182,21 @@ USE_L10N = True
 USE_TZ = True
 
 # Cloudinary configuration
-CLOUDINARY_URL = {
-    'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL')
-}
+# CLOUDINARY_URL = {
+#     'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL')
+# }
+cloudinary.config( 
+  	cloud_name = os.environ.get("CLOUDINARY_CLOUD_NAME"),
+  	api_key = os.environ.get("CLOUDINARY_API_KEY"),
+  	api_secret = os.environ.get("CLOUDINARY_API_SECRET")
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'

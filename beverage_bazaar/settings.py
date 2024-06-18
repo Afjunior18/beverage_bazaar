@@ -15,12 +15,6 @@ from pathlib import Path
 import os
 import dj_database_url
 import cloudinary
-import cloudinary.uploader
-import cloudinary.api
-import cloudinary_storage
-from dotenv import load_dotenv
-
-load_dotenv()
 
 if os.path.exists("env.py"):
   import env 
@@ -185,11 +179,9 @@ USE_L10N = True
 USE_TZ = True
 
 # Cloudinary configuration
-cloudinary.config(
-    cloud_name=os.getenv('CLOUDINARY_CLOUD_NAME'),
-    api_key=os.getenv('CLOUDINARY_API_KEY'),
-    api_secret=os.getenv('CLOUDINARY_API_SECRET')
-)
+CLOUDINARY_URL = {
+    'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL')
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/

@@ -12,7 +12,6 @@ html {
 
 body {
     background: url('/media/background_01.png') no-repeat center center fixed;
-    /** height: calc(100vh - 164px); **/
     min-height: 1200px;
     color: #ADADAD;
     font-family: "Kanit", sans-serif;
@@ -24,7 +23,7 @@ footer {
     background: #000;
     color: #fff;
     margin-top: auto;
-    padding: 20px`;
+    padding: 20px;
 }
 
 main {
@@ -143,16 +142,16 @@ h1, h2, h3 {
 .marquee p {
     margin-top: 10px;
     display: inline-block;
-    padding-left: 100%; /* Inicia o texto fora da tela à direita */
-    animation: marquee 20s linear infinite; /* Aplica a animação */
+    padding-left: 100%;
+    animation: marquee 20s linear infinite;
 }
 
 @keyframes marquee {
     0% {
-        transform: translateX(0%); /* Início do movimento (fora da tela à direita) */
+        transform: translateX(0%);
     }
     100% {
-        transform: translateX(-100%); /* Fim do movimento (fora da tela à esquerda) */
+        transform: translateX(-100%);
     }
 }
 
@@ -169,6 +168,10 @@ h1, h2, h3 {
 .card-img-top {
     max-height: 300px;
     width: auto;
+}
+
+.img-bag {
+    max-height: 130px;
 }
 
 /** Toast messages **/

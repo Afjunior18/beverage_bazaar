@@ -1,12 +1,34 @@
+/* Removing default margins, paddings and borders */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     height: 100%;
 }
 
 body {
     background: url('/media/background_01.png') no-repeat center center fixed;
-    height: calc(100vh - 164px);
+    /** height: calc(100vh - 164px); **/
+    min-height: 1200px;
     color: #ADADAD;
     font-family: "Kanit", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    margin-top: auto;
+    padding: 20px`;
+}
+
+main {
+    flex: 1;
 }
 
 h1, h2, h3 {
@@ -34,6 +56,10 @@ h1, h2, h3 {
 
 .logo-font {
     text-transform: uppercase;
+}
+
+.mt-20 {
+    margin-top: 100px;
 }
 
 .custom-bg-logo {

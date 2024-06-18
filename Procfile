@@ -1,1 +1,1 @@
-web: beverage_bazaar.wsgi --log-file -
+web: gunicorn beverage_bazaar.wsgi:application

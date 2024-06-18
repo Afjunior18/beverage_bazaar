@@ -30,12 +30,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-g5o40%=667v4-tk42+lbc-rp7r*ro0l64866u_9s-zv!)d27i$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
                     '8000-afjunior18-beveragebaza-8k5ffklxuph.ws-eu114.gitpod.io',
-                    'https://bevarages-bazaar-677df0f4b466.herokuapp.com/',
-                    'www.bevarages-bazaar-677df0f4b466.herokuapp.com'
+                    'https://bevarages-bazaar-677df0f4b466.herokuapp.com/'
                 ]
 
 

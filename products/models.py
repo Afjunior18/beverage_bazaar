@@ -20,7 +20,7 @@ class Product(models.Model):
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     sku = models.CharField(max_length=50, unique=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = CloudinaryField('image', null=True, blank=True)
+    image = CloudinaryField('image', default='default_image.jpg')
 
     def __str__(self):
         return self.name

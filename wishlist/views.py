@@ -9,7 +9,16 @@ from products.views import calculate_product_rating
 
 # Create your views here.
 
+
 def add_to_wishlist(request, product_id):
+    """
+    View to add a product to the user's wishlist.
+    If the request is POST and the form is valid,
+    the product is added to the wishlist.
+    If the wishlist does not exist for the user, it is created.
+    Success message is displayed upon successful addition.
+    """
+
     if request.method == 'POST':
         form = WishlistForm(request.POST)
         if form.is_valid():
@@ -27,6 +36,7 @@ def add_to_wishlist(request, product_id):
             return HttpResponse(status=400)
     else:
         return HttpResponse(status=405)
+
 
 def remove_from_wishlist(request, product_id):
     if request.method == 'POST':

@@ -3,6 +3,8 @@ from .models import Order
 
 
 class OrderForm(forms.ModelForm):
+    """Form for creating and updating Order model instances."""
+
     class Meta:
         model = Order
         fields = ('full_name', 'email', 'phone_number',
@@ -12,9 +14,10 @@ class OrderForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         """
-        Add placeholders and classes, remove auto-generated
-        labels and set autofocus on first field
+        Initialize the form with placeholders, classes,
+        and other attributes.
         """
+
         super().__init__(*args, **kwargs)
         placeholders = {
             'full_name': 'Full Name',

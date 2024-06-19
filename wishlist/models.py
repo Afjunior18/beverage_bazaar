@@ -6,6 +6,11 @@ from products.models import Product, Category
 # Create your models here.
 
 class Wishlist(models.Model):
+    """
+    Model representing a Wishlist.
+    Each wishlist belongs to a single user and can contain multiple products.
+    """
+
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     products = models.ManyToManyField(Product)
 

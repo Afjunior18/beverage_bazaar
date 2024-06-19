@@ -3,8 +3,9 @@ from .models import Product, Category
 
 # Register your models here.
 
+
 class ProductAdmin(admin.ModelAdmin):
-    list_display= (
+    list_display = (
         'category',
         'name',
         'description',
@@ -17,7 +18,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display= (
+    list_display = (
         'type_product',
     )
 

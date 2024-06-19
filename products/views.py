@@ -12,7 +12,10 @@ from reviews.forms import ReviewForm
 
 # Create your views here.
 def all_products(request):
-    """ A view to show all products """
+    """
+    A view to display all products, with sorting, filtering,
+    and search functionality.
+    """
 
     products = Product.objects.all()
     query = None
@@ -28,20 +31,19 @@ def all_products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
-        
+
         if 'direction' in request.GET:
             direction = request.GET['direction']
             if direction == 'desc':
                 sortkey = f'-{sortkey}'
-            
-            products = products.order_by(sortkey)
 
+            products = products.order_by(sortkey)
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__type_product__in=categories)
             categories = Category.objects.filter(type_product__in=categories)
-        
+
         if 'region' in request.GET:
             region = request.GET['region']
             if region and region != 'All':
@@ -50,12 +52,15 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request, "You didn't enter any criteria!")
                 return redirect(reverse('products'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+
+            queries = (
+                Q(name__icontains=query) |
+                Q(description__icontains=query)
+            )
             products = products.filter(queries)
-    
+
     current_sorting = f'{sort}_{direction}'
 
     # Calculating product rating for each product
@@ -75,6 +80,10 @@ def all_products(request):
 
 @login_required
 def product_detail(request, product_id):
+    """
+    A view to show individual product details and handle review submission.
+    """
+
     product = get_object_or_404(Product, pk=product_id)
 
     if request.method == 'POST':
@@ -102,15 +111,23 @@ def product_detail(request, product_id):
 
 
 def calculate_product_rating(product):
+    """
+    Helper function to calculate the average rating of a
+    product based on its reviews.
+    """
+
     rating_avg = product.reviews.aggregate(Avg('rating'))['rating__avg']
     return rating_avg if rating_avg is not None else 0
 
 
 @login_required
 def add_product(request):
-    """View to add a new product"""
+    """
+    View to add a new product. Only accessible to superusers.
+    """
+
     if not request.user.is_superuser:
-        messages.error(request, "You're not allowed! Only Admin can add a product!")
+        messages.error(request, "You're not allowed! Only Admin!")
         return redirect('home')
 
     if request.method == 'POST':
@@ -131,9 +148,12 @@ def add_product(request):
 
 @login_required
 def delete_product(request, pk):
-    """ Delete a product """
+    """
+    Delete a product. Only accessible to superusers.
+    """
+
     if not request.user.is_superuser:
-        messages.error(request, "You're not allowed! Only Admin can delete a product!")
+        messages.error(request, "You're not allowed! Only Admin!")
         return redirect('products')
 
     product = get_object_or_404(Product, pk=pk)
@@ -141,8 +161,13 @@ def delete_product(request, pk):
     messages.success(request, "Product deleted!")
     return redirect('products')
 
+
 @login_required
 def edit_product(request, pk):
+    """
+    Edit a product. Only accessible to superusers.
+    """
+
     product = get_object_or_404(Product, pk=pk)
     if request.method == 'POST':
         form = ProductForm(request.POST, instance=product)
@@ -151,12 +176,19 @@ def edit_product(request, pk):
             return redirect('products')
     else:
         form = ProductForm(instance=product)
-    return render(request, 'products/edit_product.html', {'form': form, 'product': product})
+    return render(request, 'products/edit_product.html', {
+        'form': form,
+        'product': product
+    })
 
 
 def remove_from_bag(request, product_id):
+    """
+    Remove a product from the shopping bag.
+    """
+
     product = get_object_or_404(Product, pk=product_id)
-    
+
     remove_item_from_bag(request, product)
-    
+
     return redirect('view_bag')

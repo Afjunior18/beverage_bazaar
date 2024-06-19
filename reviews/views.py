@@ -7,6 +7,10 @@ from products.models import Product
 
 
 def product_review(request, product_id):
+    """
+    View function to display product details and reviews.
+    """
+
     product = get_object_or_404(Product, id=product_id)
     reviews = Review.objects.filter(product=product)
     context = {

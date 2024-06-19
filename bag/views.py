@@ -1,18 +1,22 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-
 from products.models import Product
+
 
 # Create your views here.
 
 def view_bag(request):
-    """A view to return the shopping bag"""
+    """
+    Render the shopping bag page.
+    """
 
     return render(request, 'bag/bag.html')
 
 
 def add_to_bag(request, item_id):
-    """Add product quantity to the shopping bag"""
+    """
+    Add a specified quantity of a product to the shopping bag.
+    """
 
     product = Product.objects.get(pk=item_id)
 

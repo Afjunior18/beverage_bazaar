@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background: url('/media/background_01.png') no-repeat center center fixed;
+    background: url('https://res.cloudinary.com/dnijabg52/image/upload/v1718741610/media/background_01.png') no-repeat center center fixed !important;
     min-height: 1200px;
     color: #ADADAD;
     font-family: "Kanit", sans-serif;

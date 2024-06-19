@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/bag/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?category=Whiskies,Whiskeys,Wines,Gins</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?category=Wines&amp;sort=price&amp;direction=asc</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?category=Wines&amp;region=France</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?category=Wines&amp;region=Spain</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?category=Wines&amp;region=Italy</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?category=Wines&amp;region=Portugal</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?category=Wines</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?category=Whiskeys,Whiskies&amp;sort=price&amp;direction=asc</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?category=Whiskeys,Whiskies&amp;region=Scotland</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?category=Whiskeys,Whiskies&amp;region=Ireland</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?category=Whiskeys,Whiskies&amp;region=Japan</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?category=Whiskeys,Whiskies&amp;region=USA</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?category=Whiskeys,Whiskies=Whiskeys,Whiskies</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?category=Gins&amp;sort=price&amp;direction=asc</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?category=Gins&amp;region=England</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?category=Gins&amp;region=Scotland</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?category=Gins&amp;region=USA</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/?category=Gins</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/supplier/apply/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/products/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/124/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/117/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/119/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/115/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/113/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/116/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/121/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/126/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/127/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/129/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/125/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/110/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/108/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/107/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/112/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/111/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/131/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/114/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=/products/product/109/</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F124%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F117%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F119%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F115%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F113%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F116%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F121%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F126%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F127%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F129%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F125%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F110%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F108%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F107%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F112%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F111%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F131%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F114%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/signup/?next=%2Fproducts%2Fproduct%2F109%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F124%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F117%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F119%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F115%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F113%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F116%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F121%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F126%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F127%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F129%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F125%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F110%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F108%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F107%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F112%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F111%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F131%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F114%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://bevarages-bazaar-677df0f4b466.herokuapp.com/accounts/login/?next=%2Fproducts%2Fproduct%2F109%2F</loc>
+  <lastmod>2024-06-19T09:30:24+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>

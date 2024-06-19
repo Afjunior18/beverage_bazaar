@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /accounts/
+Sitemap: https://bevarages-bazaar-677df0f4b466.herokuapp.com/sitemap.xml

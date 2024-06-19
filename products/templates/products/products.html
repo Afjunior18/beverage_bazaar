@@ -46,7 +46,7 @@
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
                                             <p class="lead mb-0 text-center"></p>{{ product.region }}</p>
-                                            <div class="row d-flex justify-content-center mr-1">
+                                            <div class="row d-flex justify-content-center mr-0">
                                                 <form method="post" action="{% url 'add_to_bag' product.id %}" class="mr-2">
                                                     {% csrf_token %}
                                                     <input type="hidden" name="product_id" value="{{ product.id }}">

@@ -31,11 +31,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
                 '8000-afjunior18-beveragebaza-8k5ffklxuph.ws-eu114.gitpod.io',
-                'bevarages-bazaar-677df0f4b466.herokuapp.com'
+                'bevarages-bazaar-677df0f4b466.herokuapp.com',
+                '8000-afjunior18-beveragebaza-vybwjmo0xvw.ws-us115.gitpod.io'
                 ]
 
 

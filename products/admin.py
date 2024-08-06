@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Product, Category
+from .forms import ProductForm
 
 # Register your models here.
 
@@ -21,6 +22,10 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'type_product',
     )
+
+
+class ProductAdmin(admin.ModelAdmin):
+    form = ProductForm
 
 
 admin.site.register(Product, ProductAdmin)

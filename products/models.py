@@ -1,5 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
+from django.core.exceptions import ValidationError
 
 
 # Create your models here.
@@ -26,3 +27,15 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    def clean(self):
+        super().clean()
+        if self.price is not None and self.price < 0:
+            raise ValidationError('Price cannot be negative')
+        if self.rating is not None and self.rating < 0:
+            raise ValidationError('Rating cannot be negative')
+
+    def save(self, *args, **kwargs):
+        self.clean()
+        super().save(*args, **kwargs)
+

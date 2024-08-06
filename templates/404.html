@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container mt-5 bg-white text-black p-5">
+        <div class="row m-5">
+            <div class="col text-center m-0">
+                <h2 class="logo-font mt-4">Oops! Page Not Found</h2>
+                <p>The page you are looking for could not be found.</p>
+                <a href="{% url 'home' %}" class="btn btn-black rounded-0 text-uppercas">Go to Home</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

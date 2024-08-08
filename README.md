@@ -608,6 +608,23 @@ Special attention is given to ensuring that the platform is responsive across va
 
 - Status - As of now, the issue remains unresolved but has been acknowledged as non-impacting to the checkout process. It will be prioritized for investigation and correction once authorized for further development post-deployment.
 
+**Issue** - The webhook was failing to complete successfully due to a missing trailing slash in the URL and an additional issue with missing settings import in the `webhook_handler.py` file. These issues caused the server to not recognize the endpoint correctly and prevented the webhook from fully processing the payment confirmation.
+
+- Cause - The initial issue was identified as a missing trailing slash in the webhook URL, which is required by Django to correctly route the request to the intended view. Without the slash, Django was unable to match the URL to the appropriate view, resulting in a failure to process the webhook event.
+
+After correcting the URL, a second issue was identified. The `webhook_handler.py` file was missing the necessary import statement: `from django.conf import settings`. This import is essential for accessing settings variables, such as email configurations, which are required during the processing of the webhook.
+
+- Status - Both issues have been resolved. The URL now includes the trailing slash, and the `webhook_handler.py` file has been updated to include the necessary import statement. The webhook now completes successfully, ensuring that the payment confirmation process functions as intended.
+
+Below are screenshots showing the issues before and after the fixes:
+- **Before**: The webhook URL without the trailing slash resulted in an error, and the missing import in `webhook_handler.py`.
+- **After**: The corrected webhook URL with the trailing slash, and the inclusion of the necessary import in `webhook_handler.py`, allowing successful processing.
+
+![Webhook Error Before](docs/images/error_slash_webhook.png)
+![Webhook Fixed After](docs/images/fix_error_slash_webhook.png)
+
+![Webhook_handler.py Fixed](docs/images/fix_last_error.png)
+
 ## Future Implementations
 
 **Unique SKU Constraint in Add Product Form**

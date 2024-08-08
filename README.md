@@ -489,6 +489,17 @@ Special attention is given to ensuring that the platform is responsive across va
 | &check; | Easy Identification of the Searched Content on the Page |
 | &check; | Informative Indication of User Authentication Status |
 
+**Register**:
+
+| Status  | Feature |
+|:-------:|:--------|                                                                            
+| &check; | User registration form |  
+| &check; | Input validation for all required fields |       
+| &check; | Email confirmation upon successful registration |
+| &check; | Error messages for incorrect or missing field entries |
+| &check; | Account activation after email confirmation |
+| &check; | Access granted upon successful email confirmation and registration completion |
+
 **Add product**:
 
 | Status  |   Feature   |

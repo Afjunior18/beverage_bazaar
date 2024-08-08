@@ -608,22 +608,70 @@ Special attention is given to ensuring that the platform is responsive across va
 
 - Status - As of now, the issue remains unresolved but has been acknowledged as non-impacting to the checkout process. It will be prioritized for investigation and correction once authorized for further development post-deployment.
 
-**Issue** - The webhook was failing to complete successfully due to a missing trailing slash in the URL and an additional issue with missing settings import in the `webhook_handler.py` file. These issues caused the server to not recognize the endpoint correctly and prevented the webhook from fully processing the payment confirmation.
+**Issue** - The webhook was failing to complete successfully due to a missing trailing slash in the URL and an additional issue with missing settings import in the `webhook_handler.py` file. These issues caused the server to not recognize the endpoint correctly and prevented the webhook from fully processing the payment confirmation. This, in turn, affected the user registration process as the confirmation email was not being sent, preventing new users from verifying their email addresses and gaining access to their accounts.
 
 - Cause - The initial issue was identified as a missing trailing slash in the webhook URL, which is required by Django to correctly route the request to the intended view. Without the slash, Django was unable to match the URL to the appropriate view, resulting in a failure to process the webhook event.
 
 After correcting the URL, a second issue was identified. The `webhook_handler.py` file was missing the necessary import statement: `from django.conf import settings`. This import is essential for accessing settings variables, such as email configurations, which are required during the processing of the webhook.
 
-- Status - Both issues have been resolved. The URL now includes the trailing slash, and the `webhook_handler.py` file has been updated to include the necessary import statement. The webhook now completes successfully, ensuring that the payment confirmation process functions as intended.
+These combined issues not only disrupted the payment confirmation process but also caused a failure in the user registration process. Since the confirmation email was not being sent due to the webhook failure, new users were unable to confirm their email addresses, which blocked them from accessing their accounts.
 
-Below are screenshots showing the issues before and after the fixes:
-- **Before**: The webhook URL without the trailing slash resulted in an error, and the missing import in `webhook_handler.py`.
-- **After**: The corrected webhook URL with the trailing slash, and the inclusion of the necessary import in `webhook_handler.py`, allowing successful processing.
+- Status - Both issues have been resolved. The URL now includes the trailing slash, and the `webhook_handler.py` file has been updated to include the necessary import statement. As a result, the webhook now completes successfully, and the email confirmation process for new user registrations functions as intended. New users can now receive confirmation emails, verify their email addresses, and gain access to their accounts seamlessly.
 
-![Webhook Error Before](docs/images/error_slash_webhook.png)
-![Webhook Fixed After](docs/images/fix_error_slash_webhook.png)
+Below are screenshots showing the issues before and after the fixes, including the entire registration process:
+- **Before**: The webhook URL without the trailing slash and the missing import in `webhook_handler.py`, leading to email confirmation failures.
+- **After**: The corrected webhook URL with the trailing slash, the inclusion of the necessary import in `webhook_handler.py`, and the successful execution of the registration process.
 
+![Webhook Missing slash Error Before](docs/images/error_slash_webhook.png)
+![Webhook Missing slash Fixed After](docs/images/fix_error_slash_webhook.png)
+
+![Webhook_handler.py Errror](docs/images/last_error_01.png)
+![Webhook_handler.py Errror](docs/images/last_error_02.png)
 ![Webhook_handler.py Fixed](docs/images/fix_last_error.png)
+
+![Sign up - first](docs/images/sign_up_funcionality.png)
+![Email sent](docs/images/email_confirm_registration.png)
+![Email confirmation](docs/images/confirm_email_registration.png)
+![Success registration](docs/images/success_confirm_registration.png)
+
+![Email confirmation Order](docs/images/email_confirmation_order.png)
+
+**Issue** - The application previously allowed the entry of negative values for prices and ratings in the product models and forms. This led to incorrect data being stored, which could negatively impact the user experience and result in misleading product information.
+
+- Cause - The lack of validation checks in the product models and forms permitted negative values to be entered and saved, resulting in incorrect price and rating data being displayed on the site.
+
+- Solution - To address this, validation logic was added both in the `Product` model and in the product forms to ensure that no negative values can be saved. Specifically:
+  
+- In `models.py`, the `clean` method was overridden to include checks that raise a `ValidationError` if the `price` or `rating` fields contain negative values. Additionally, the `save` method was modified to call the `clean` method before saving the product instance.
+
+def clean(self):
+    super().clean()
+    if self.price is not None and self.price < 0:
+        raise ValidationError('Price cannot be negative')
+    if self.rating is not None and self.rating < 0:
+        raise ValidationError('Rating cannot be negative')
+
+def save(self, *args, **kwargs):
+    self.clean()
+    super().save(*args, **kwargs)
+
+- In `forms.py`, custom `clean_price` and `clean_rating` methods were implemented to validate the form data before submission, ensuring that any negative values are caught and rejected.
+
+def clean_price(self):
+    price = self.cleaned_data.get('price')
+    if price < 0:
+        raise forms.ValidationError('Price cannot be negative')
+    return price
+
+def clean_rating(self):
+    rating = self.cleaned_data.get('rating')
+    if rating is not None and rating < 0:
+        raise forms.ValidationError('Rating cannot be negative')
+    return rating
+
+- Status - This issue has been successfully resolved, preventing the entry and storage of negative prices and ratings. Now, all product data is validated both at the model and form level, ensuring data integrity and improving user experience.
+
+![Handle_negative_values](docs/images/handle_negative_value.png)
 
 ## Future Implementations
 
